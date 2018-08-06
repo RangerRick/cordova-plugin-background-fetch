@@ -58,7 +58,7 @@
             </feature>
         </config-file>
 
-        <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application" mode="merge">
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
             <service android:exported="true" android:name="com.transistorsoft.cordova.backgroundfetch.HeadlessJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
 
             <receiver android:name="com.transistorsoft.cordova.backgroundfetch.HeadlessBroadcastReceiver">
@@ -67,7 +67,7 @@
                 </intent-filter>
             </receiver>
 
-        </config-file>
+        </edit-config>
 
     </platform>
 
